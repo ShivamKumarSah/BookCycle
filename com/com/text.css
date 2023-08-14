@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    font-family: sans-serif;
+    background-color: #000;
+}
+
+
+h2 {
+    font-size: 2vw;
+    /* color: #333; */
+    color: #000;
+    font-weight: 500;
+}
+
+h2 span {
+    animation: animate 8s linear infinite;
+}
+
+h2 span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+h2 span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+h2 span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+h2 span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+h2 span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+h2 span:nth-child(6) {
+    animation-delay: 1s;
+}
+
+h2 span:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+h2 span:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+h2 span:nth-child(9) {
+    animation-delay: 1.6s;
+}
+
+h2 span:nth-child(10) {
+    animation-delay: 1.8s;
+}
+
+h2 span:nth-child(11) {
+    animation-delay: 2s;
+}
+
+h2 span:nth-child(12) {
+    animation-delay: 2.2s;
+}
+
+h2 span:nth-child(13) {
+    animation-delay: 2.4s;
+}
+
+h2 span:nth-child(14) {
+    animation-delay: 2.6s;
+}
+
+h2 span:nth-child(15) {
+    animation-delay: 2.8s;
+}
+
+h2 span:nth-child(16) {
+    animation-delay: 3s;
+}
+
+h2 span:nth-child(17) {
+    animation-delay: 3.2s;
+}
+
+h2 span:nth-child(18) {
+    animation-delay: 3.4s;
+}
+
+h2 span:nth-child(19) {
+    animation-delay: 3.6s;
+}
+
+h2 span:nth-child(20) {
+    animation-delay: 3.8s;
+}
+
+@keyframes animate {
+
+    0%,
+    80% {
+        /* color: #333; */
+        color: #000;
+        /* box-shadow: none; */
+        text-shadow: none;
+    }
+
+    100% {
+        color: #fff;
+        /* box-shadow:none; */
+        text-shadow: 0 0 10px #fff,
+            0 0 20px #fff,
+            0 0 40px #fff,
+            0 0 80px #fff,
+            0 0 100px #fff,
+            0 0 120px #fff,
+            0 0 140px #fff,
+            0 0 160px #fff,
+    }
+}
+
+/* Custom CSS for Mobile View */
+@media (max-width: 767px) {
+    .navbar {
+        position: relative;
+    }
+
+    .carouselExampleAutoplaying {
+        margin-top: 56px;
+        /* Adjust this value as needed */
+    }
+
+    /* Hide card details in mobile view */
+    .card-text {
+        display: none;
+    }
+}

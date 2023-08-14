@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" type="x icon" href="  https://homeavitaraf.arnabmanna1.repl.co/book%20picture/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/myprofile.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <title>Seller Page</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <section id="content" class="container">
+    <div class="page-heading">
+      <div class="media clearfix">
+        <div class="media-left pr30">
+          <a href="#">
+            <img class="media-object mw150"
+              src="https://icons.iconarchive.com/icons/papirus-team/papirus-status/512/avatar-default-icon.png"
+              alt="...">
+          </a>
+        </div>
+        <div class="media-body va-m">
+          <h2 class="media-heading">Welcome <span id="username">User</span>
+          </h2>
+        </div>
+
+        <div><button class="button-29" id="logoutBtn">Logout</button></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="panel">
+          <div class="panel-heading">
+            <span class="panel-icon">
+              <i class="fa fa-star"></i>
+            </span>
+            <span class="panel-title"> User Details</span>
+          </div>
+          <div class="panel-body pn">
+            <table class="table mbn tc-icon-1 tc-med-2 tc-bold-last">
+              <tbody>
+
+                <tr>
+                  <td>
+                    <i class="fa fa-phone" style="color: rgb(62, 197, 152);"></i>
+                    User Name
+                  </td>
+                  <td id="userName">
+                    User Name</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <i class="fa fa-phone" style="color: rgb(62, 197, 152);"></i>
+                    E-mail
+                  </td>
+                  <td id="mail">
+                    User Email</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <i class="fa fa-phone" style="color: rgb(62, 197, 152);"></i>
+                    Phone Number
+                  </td>
+                  <td id="phone">
+                    +91 **********</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <i class="fa fa-phone" style="color: rgb(62, 197, 152);"></i>
+                    Role
+                  </td>
+                  <td id="role">
+                    User Role</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <i class="fa fa-address-card" style="color: rgb(62, 197, 152);"></i>
+                    Address
+                  </td>
+                  <td id="city">
+                    City Name</td>
+                </tr>
+                <tr>
+                  <td>
+
+                    <i class="fa fa-phone" style="color: rgb(62, 197, 152);"></i>
+                    Pincode
+                  </td>
+                  <td id="pincode">
+                    pincode</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-8">
+
+        <div class="tab-block">
+          <ul class="nav nav-tabs">
+            <li>
+              <button class="tab1" onclick="MyList()">My List</button>
+            </li>
+            <li>
+              <!---- <a href="" data-toggle="tab" onclick="newList">Add New List</a -->
+              <button class="tab1" onclick="newList()">Add Book</button>
+            </li>
+            <li>
+              <button class="tab1">Order</button>
+            </li>
+            <li>
+              <button class="tab1">Payment</button>
+            </li>
+          </ul>
+
+          <div id="articleContainer">
+            <div id="articleWrapper"></div>
+            <div class="box" id="box" style="display: none;">
+              <form id="uploadBookForm">
+                <span class="text-center">Book Details</span>
+                <div class="input-container">
+                  <input type="text" required="" name="bookName" />
+                  <label>Book Name</label>
+                </div>
+
+                <div class="input-container">
+                  <input type="text" required="" name="authorName" />
+                  <label>Author Name</label>
+                </div>
+                <div class="input-container">
+                  <input type="text" required="" name="price" />
+                  <label>Price</label>
+                </div>
+                <div class="input-container">
+                  <input type="text" required="" name="origin" />
+                  <label>Origin</label>
+                </div>
+                <div class="input-container">
+                  <label>Book Description</label>
+                  <textarea class="stextarea" name="description" id="stextarea" cols="30" rows="10" required=""
+                    name="origin"></textarea>
+                </div>
+                <div class="input-container">
+                  <label>Book Image</label>
+                  <input type="file" required="" id="photo" />
+
+                </div>
+                <input type="submit" value="Upload" class="button-29" role="button">
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script src="./scripts/myprofile.js"></script>
+</body>
+
+</html>

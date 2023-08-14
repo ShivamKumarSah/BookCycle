@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" type="x icon" href="  https://homeavitaraf.arnabmanna1.repl.co/book%20picture/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SignUp-BookCycle</title>
+  <link rel="stylesheet" href="./css/signUp.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="body-container">
+    <div class="loggin-section">
+      <div class="front"><img src="book picture/logo.png" alt="" id="logo"> BookCycle</div>
+      <div id="signIn">
+        <input type="checkbox" id="check">
+        <div class="login form">
+          <header>Sign Up</header>
+          <form id="regForm">
+            <input type="text" name="username" id="username" placeholder="Username">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="tel" placeholder="Phone Number" id="phoneNumber" name="phoneNumber">
+            <input type="text" placeholder="Address" id="address" name="address">
+            <input type="tel" placeholder="Pincode" id="pincode" name="pincode">
+            <label for="user-seller">Select User or Seller:</label>
+            <select name="user-seller" id="user-seller">
+              <option value="user" id="user">User</option>
+              <option value="seller" id="seller">Seller</option>
+            </select>
+            <input type="password" id="password" name="password" placeholder="Create a password">
+            <input type="text" id="cpassword" name="cpassword" placeholder="Confirm your password">
+            <input type="submit" class="button" value="Sign Up">
+          </form>
+
+          <div class="signup">
+            <span class="signup">Already have an account?
+              <a href="./SignIn.html">
+                <label>Login</label>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="image-section">
+      <img class="img-books" src="book picture/piles of books.jpg" alt="piles of books">
+    </div>
+  </div>
+  <script src="./scripts/signup.js"></script>
+</body>
+
+</html>

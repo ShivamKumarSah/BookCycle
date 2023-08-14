@@ -1,0 +1,126 @@
+.navbar {
+    padding: 15px 25px;
+    /* background-color: #4e005e; */
+    background-color: #009688;
+    /* opacity: 0.9; */
+    z-index: 1;
+}
+
+.img {
+    height: 10px;
+}
+
+#cart {
+    width: 35px;
+    height: 30px;
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+}
+
+.carousel-item img {
+    height: 260px;
+
+}
+
+.form-control {
+    background-color: #fff;
+    color: black;
+    outline: none;
+}
+
+.form-control:focus {
+    background-color: #fff;
+    outline: none;
+}
+
+
+body {
+    /* background-image:url("book picture/blue\ star.jpg"); */
+    background-color: azure;
+    /* background-repeat: repeat */
+}
+
+/* this  help to close the modal or form of the signup and login page */
+.modal-backdrop {
+    display: none;
+}
+
+#headding h3 {
+    display: inline-block;
+    padding-top: 3vh;
+    padding-left: 5vw;
+    color: #fff;
+}
+
+#space {
+    height: 12px;
+    background-color: black;
+    /* background-color: #e3e6e6; */
+
+}
+
+#spaceSecond {
+    height: 10vh;
+}
+
+.card-img-top {
+    height: 280px;
+    /* margin: 24px; */
+
+}
+
+.card {
+    box-shadow: 2px 2px 5px #009579;
+}
+
+.container1 {
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 10vh 0 10vh;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 20px #009579;
+}
+
+footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    /* Set the background color of the footer */
+    padding: 10px 0px 0px 20px;
+    /* Adjust the padding as needed */
+    /* text-align: center; */
+}
+
+#foot {
+    background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#modalSize {
+    width: 300px;
+}
+
+form {
+    text-align: center;
+}
+
+#User {
+    margin-right: 20px;
+}
+
+#Seller {
+    margin-right: 20px;
+}

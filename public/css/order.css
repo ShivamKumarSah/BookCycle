@@ -1,0 +1,127 @@
+.navbar {
+  background-color: #009688;
+  /* background-color:#009688; */
+  /* opacity: 0.9; */
+  z-index: 1;
+}
+
+#cart {
+  width: 35px;
+  height: 30px;
+}
+
+#logo {
+  width: 30px;
+  height: 30px;
+}
+
+.form-control {
+  background-color: white;
+}
+
+.form-control:focus {
+  background-color: white;
+}
+
+body {
+  /* background-image:url("book picture/blue\ star.jpg");
+  background-repeat:repeat; */
+  background-color: white;
+}
+
+/* this  help to close the modal or form of the signup and login page */
+.modal-backdrop {
+  display: none;
+}
+
+#headding h3 {
+  display: inline-block;
+  padding-top: 3vh;
+  padding-left: 5vw;
+  color: #fff;
+}
+
+#space {
+  height: 12px;
+  background-color: black;
+  /* background-color: #e3e6e6; */
+
+}
+
+
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px yellow;
+}
+
+footer {
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  /* Set the background color of the footer */
+  padding: 10px 0px 0px 20px;
+  /* Adjust the padding as needed */
+  /* text-align: center; */
+}
+
+#foot {
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#modalSize {
+  width: 300px;
+}
+
+form {
+  text-align: center;
+}
+
+#User {
+  margin-right: 20px;
+}
+
+#Seller {
+  margin-right: 20px;
+}
+
+/* start this page css */
+b {
+  color: blue;
+}
+
+.container span {
+  font-weight: bold;
+}
+
+.container {
+  font-size: 18px;
+  font-family: serif;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    position: relative;
+  }
+
+  .carouselExampleAutoplaying {
+    margin-top: 56px;
+    /* Adjust this value as needed */
+  }
+
+  #ratting {
+    width: 368px;
+    height: 172px;
+  }
+
+  .container {
+    font-size: 16px;
+  }
+}

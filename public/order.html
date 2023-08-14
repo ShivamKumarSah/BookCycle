@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>order</title>
+  <link rel="shortcut icon" type="x icon" href="  https://homeavitaraf.arnabmanna1.repl.co/book%20picture/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <link rel="stylesheet" href="index.css"> -->
+  <link rel="stylesheet" href="./css/order.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <!--navbar-expand-lg bg-primary data-bs-theme="dark" -->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img id="logo" src="book picture/logo.png" alt=""> BookCycle</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- navbarSupportedContent -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              All
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Jee Main Books</a></li>
+              <li><a class="dropdown-item" href="#">Jee Advanced Books</a></li>
+              <li><a class="dropdown-item" href="#">Neet Books</a></li>
+              <li><a class="dropdown-item" href="#">Wb Jee Books</a></li>
+              <li><a class="dropdown-item" href="#">B.Sc(Hons.) Books</a></li>
+              <li><a class="dropdown-item" href="#">UPSC Books</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Comic Books</a></li>
+              <li><a class="dropdown-item" href="#">Light Novels</a></li>
+              <li><a class="dropdown-item" href="#">Story Books</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 52vw;">
+          <button class="btn btn-outline-warning" type="submit">Search</button>
+        </form>
+        <div class="mx-2">
+          <button id="logOut" class="btn btn-warning">Log out</button>
+          <button id="loginButton" class="btn btn-outline-info" data-bs-toggle="modal"
+            data-bs-target="#loginModal">Login</button>
+          <button id="signupButton" class="btn btn-outline-info" data-bs-toggle="modal"
+            data-bs-target="#signUpModal">Sign
+            up</button>
+          <a href="/myprofile.html"><button class="btn btn-outline-warning cart" data-bs-toggle="modal"><img id="cart"
+                src="https://img.freepik.com/free-icon/user_318-159711.jpg" alt=""></button></a>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div id="modalSize" class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Login to BookCycle</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+
+            <button type="submit" id="Admin" class="btn btn-danger mx-2" data-bs-dismiss="modal "><a
+                href="./adminLOGin.html">Admin</a>
+
+              <button type="submit" id="User" class="btn btn-warning" data-bs-dismiss="modal"><a
+                  href="./SignIn.html">User</a></button>
+              <button type="submit" id="Seller" class="btn btn-primary" data-bs-dismiss="modal"><a
+                  href="./BusinessSignIn.html">Seller</a></button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--sign up Modal -->
+  <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div id="modalSize" class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="signUpModalLabel">Create an Account</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <button type="submit" id="User" class="btn btn-warning" data-bs-dismiss="modal"><a
+                href="https://regupalabdhi.arnabmanna1.repl.co">User</a></button>
+            <button type="submit" id="Seller" class="btn btn-primary" data-bs-dismiss="modal"><a
+                href="https://regupalabdhi.arnabmanna1.repl.co">Seller</a></button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of the navbar -->
+  <div id="space" class="container" style="background-color:white;"></div>
+
+  <div class="container" style="background-color:white">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 id="bookName" class="featurette-heading fw-normal lh-1" style="font-size:35px; margin-top: 10px;">
+        </h2>
+        <p id="writerName" class="text-body-secondary" style="font-size:20px"></p>
+        <span class="lead" style="font-size: 17px; color:green;">Price:</span>
+        <h3 id="price" style="display:inline-block;font-weight:bold;"> &#8377;532 </h3>
+        <p class="lead" style="font-size:17px;">
+        <pre id="description">Book Description
+          </pre>
+        </p>
+        <div class="container">
+          <h3>Book Details:</h3>
+          <pre>
+            <b>Book-Name  : <span id="Book-Name" style="color: black; font-weight: 100;"></span></b>
+            <b>Author Name  : <span id="Author-Name" style="color: black; font-weight: 100;"></span></b>
+            <b>Origin  : <span id="Origin" style="color: black; font-weight: 100;"></span></b>
+            <b>Seller's Address  : <span id="Address" style="color: black; font-weight: 100;"></span></b>
+            <b>Pincode  : <span id="Pincode" style="color: black; font-weight: 100;"></span></b>
+            <b>Ad Posted  : <span id="Posted" style="color: black; font-weight: 100;"></span></b>
+            <b>Contact E-mail  : </b><span id="email" style="color: black; font-weight: 100;"></span></b>
+            <b>Contact Number  : </b><span id="phone" style="color: black; font-weight: 100;"></span></b>
+          </pre>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <img class="img-fluid " width="300" height="300"
+          src="https://static.vecteezy.com/system/resources/previews/009/384/332/original/old-vintage-book-clipart-design-illustration-free-png.png"
+          alt="">
+        <div>
+          <button id="callbtn" class="btn btn-warning" style="width: 136px;margin: 20px 10px 20px 0;color: white;">Call
+            Seller</button>
+          <button id="mailbtn" class="btn btn-primary" style="width: 136px;margin: 20px 0 20px 0;color: white;">Mail
+            Seller</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer strat -->
+  <footer id="foot" class=" py-5 style= width:100%;">
+    <div class="row">
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary text-decoration-none" href="#">Cool Books</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="float-end"><a id="backto" href="#">&uarr;Back to Top &uarr;</a> </p>
+    <p>© 2023–20XX Company, BookCycle. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </footer>
+
+  <script src="scripts/home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

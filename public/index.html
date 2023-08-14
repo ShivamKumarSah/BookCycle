@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>first page</title>
+  <link rel="shortcut icon" type="x icon" href="  https://homeavitaraf.arnabmanna1.repl.co/book%20picture/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/text.css">
+  <style>
+    /* Custom CSS for Mobile View */
+    @media (max-width: 767px) {
+      .navbar {
+        position: relative;
+        height: auto;
+      }
+
+      .carouselExampleAutoplaying {
+        margin-top: 56px;
+        /* Adjust this value as needed */
+      }
+
+      /* Hide card details in mobile view */
+      .card-text {
+        display: none;
+      }
+
+      .card-body h5 {
+        /* display: none; */
+        font-size: 14px;
+      }
+
+      .card {
+        margin-right: 10px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <!--navbar-expand-lg bg-primary data-bs-theme="dark" -->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img id="logo" src="book picture/logo.png" alt=""> BookCycle</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- navbarSupportedContent -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://bookcycle.arnabmanna1.repl.co">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://bookcycle.arnabmanna1.repl.co">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              All
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Jee Main Books</a></li>
+              <li><a class="dropdown-item" href="#">Jee Advanced Books</a></li>
+              <li><a class="dropdown-item" href="#">Neet Books</a></li>
+              <li><a class="dropdown-item" href="#">Wb Jee Books</a></li>
+              <li><a class="dropdown-item" href="#">B.Sc(Hons.) Books</a></li>
+              <li><a class="dropdown-item" href="#">UPSC Books</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Comic Books</a></li>
+              <li><a class="dropdown-item" href="#">Light Novels</a></li>
+              <li><a class="dropdown-item" href="#">Story Books</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 50vw;">
+          <button class="btn btn-outline-warning" type="submit">Search</button>
+        </form>
+        <div class="mx-2">
+          <button id="logOut" class="btn btn-warning">Log out</button>
+          <button id="loginButton" class="btn btn-outline-info" data-bs-toggle="modal"
+            data-bs-target="#loginModal">Login</button>
+          <button id="signupButton" class="btn btn-outline-info" data-bs-toggle="modal"
+            data-bs-target="#signUpModal">Sign
+            up</button>
+          <!-- <a href="https://userpagesap.arnabmanna1.repl.co">
+            <button class="btn btn-outline-warning cart" data-bs-toggle="modal"><img id="cart"
+                src="book picture/cart.jpg" alt=""></button></a> -->
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div id="modalSize" class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Login to BookCycle</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <button type="submit" id="Admin" class="btn btn-danger mx-2" data-bs-dismiss="modal "><a
+                href="./adminLOGin.html">Admin</a>
+
+              <button type="submit" id="User" class="btn btn-warning" data-bs-dismiss="modal "><a
+                  href="./SignIn.html">User</a></button>
+              <button type="submit" id="Seller" class="btn btn-primary" data-bs-dismiss="modal"><a
+                  href="./BusinessSignIn.html">Seller</a></button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--sign up Modal -->
+  <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div id="modalSize" class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="signUpModalLabel">Create an Account</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+
+            <button type="submit" id="User" class="btn btn-warning" data-bs-dismiss="modal"><a
+                href="./SignUp.html">User</a></button>
+            <button type="submit" id="Seller" class="btn btn-primary" data-bs-dismiss="modal"><a
+                href="./SignUp.html">Seller</a></button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of the navbar -->
+
+  <!-- slider -->
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="5"
+        aria-label="Slide 6"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="book picture/use slider2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5></h5>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="book picture/new book slider11.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5></h5>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="book picture/use slider1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5></h5>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="book picture/new bookslider3.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark"></h5>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="book picture/new booksllidex2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5></h5>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="book picture/color book slider.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5></h5>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div id="space"></div>
+  <!-- headding -->
+  <div class="box">
+    <h2>
+      <span>W</span>
+      <span>E</span>
+      <span>L</span>
+      <span>C</span>
+      <span>O</span>
+      <span>M</span>
+      <span>E</span>
+      <span>_</span>
+      <span>T</span>
+      <span>O</span>
+      <span>_</span>
+      <span>B</span>
+      <span>O</span>
+      <span>O</span>
+      <span>K</span>
+      <span>C</span>
+      <span>Y</span>
+      <span>C</span>
+      <span>L</span>
+      <span>E</span>
+    </h2>
+  </div>
+  <!-- end of headding -->
+
+  <!-- start of the cards -->
+  <span id="headding">
+    <h3><u>Jee Advanced:</u></h3>
+  </span>
+  <div class="container my-4 d-flex justify-content-between align-items-center text-center">
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html">
+        <img src="book picture/jee advanced 2.webp" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5><b>PHYSICS</b></h5>
+        <span class="card-text">Chapter-wise PYQ's and detailed solution</span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/jee advanced 3.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5><b>MATH</b></h5>
+        <span class="card-text">IIT-JEE ADVANCED one of the best math book</span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/jee advanced4.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5><b>Chemistry</b></h5>
+        <span class="card-text">Chapter-wise PYQ's and detailed solution </span>
+      </div>
+    </div>
+  </div>
+  <span id="headding">
+    <h3><u>Jee Main:</u></h3>
+  </span>
+  <div class="container my-4 d-flex justify-content-between align-items-center text-center">
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/jee advance.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>Advanced Physics</b></h5>
+        <span class="card-text">ASHISH ARORA/ 700+ advanced question and detailed solution </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/jee 1.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>Electrostatics & Current</b></h5>
+        <span class="card-text">2000+ problems with solution. for jee main and advanced </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/iit.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>Coordinate Geometry</b></h5>
+        <span class="card-text">Past exams questions and answers. all type of questions </span>
+      </div>
+    </div>
+  </div>
+
+  <div id="headding">
+    <h3><u>B.Sc(Hons.):</u></h3>
+  </div>
+  <div class="container my-4 d-flex justify-content-between align-items-center text-center">
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/bsc 3.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>PHYSICS-I</b></h5>
+        <span class="card-text">HK DASS_RAMA VERMA_RAJNIS VARMA.(semester-I) </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/bsc1.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>Chemistry</b></h5>
+        <span class="card-text">RL MADAN.| Inorganic | Physical | Laboratry | </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/bsc2.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>PHYSIC</b></h5>
+        <span class="card-text">PS HEMNE | CL ARORA |.For B.Sc. Students </span>
+      </div>
+    </div>
+  </div>
+
+  <div id="headding">
+    <h3><u>UPSC:</u></h3>
+  </div>
+  <div class="container my-4 d-flex justify-content-between align-items-center text-center">
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/upsc.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5><b>GEOGRAPHY</b></h5>
+        <span class="card-text">for UPSC CSE and state PCS(1st-eddition) </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/upsc e.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5><b>HISTORY</b></h5>
+        <span class="card-text">BIPAN CHANDR| for UPSC Exam </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/upsc 3.jpg" class="card-img-top" alt="..."></a>
+      <div class="card-body">
+        <h5><b>UPSC IAS Prelims</b></h5>
+        <span class="card-text">10 Year-wise solved paper </span>
+      </div>
+    </div>
+  </div>
+
+  <div id="headding">
+    <h3><u>NEET:</u></h3>
+  </div>
+  <div class="container my-4 d-flex justify-content-between align-items-center text-center">
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/neet 4.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>10 YEARS NEET</b></h5>
+        <span class="card-text">Previous 10 Years all questions and answers.(math+pysics+chemistry)
+        </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/neet 5.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>NEET UG</b></h5>
+        <span class="card-text">Target: 10 Full Syllabus Mock Texts </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/neet1 .jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>PHYSICAL CHEMISTRY</b></h5>
+        <span class="card-text">2000+ physical chemistry questions for neet with proper solutions
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div id="headding">
+    <h3><u>Codding:</u></h3>
+  </div>
+  <div class="container my-4 d-flex justify-content-between align-items-center text-center">
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/coding1.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>PYTHON </b></h5>
+        <span class="card-text">Learn Python in no time | programming questions | OOP | </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/codding 2.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>Let Us C</b></h5>
+        <span class="card-text">Arithmatic Guide To C programming Language </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/codding4.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>Core Java</b></h5>
+        <span class="card-text">BPS PUBLICATION | Learn JAVA | OOP'S | </span>
+      </div>
+    </div>
+  </div>
+
+  <div id="headding">
+    <h3><u>School Books</u></h3>
+  </div>
+  <div class="container my-4 d-flex justify-content-between align-items-center text-center">
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/school.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>ALL IN 1</b></h5>
+        <span class="card-text">English | Scince | Hindi | Mathematics </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/school book.jpg" class="card-img-top img-fluid" alt="..."><a>
+          <div class="card-body">
+            <h5><b>Chemistry</b></h5>
+            <span class="card-text">Scince for 9th class | CBSC | </span>
+          </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/school book1.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>BIOLOGY</b></h5>
+        <span class="card-text">Scince for 9th class | CBSC | </span>
+      </div>
+    </div>
+  </div>
+
+  <div id="headding">
+    <h3><u>Comics:</u></h3>
+  </div>
+  <div class="container my-4 d-flex justify-content-between align-items-center text-center">
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/comics.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>JUJUTSU KAISEN</b></h5>
+        <span class="card-text"> </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/comics2.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>Black Clover</b></h5>
+        <span class="card-text"> </span>
+      </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <a href="./order.html"><img src="book picture/comics3.jpg" class="card-img-top img-fluid" alt="..."></a>
+      <div class="card-body">
+        <h5><b>Demon Slayer</b></h5>
+        <span class="card-text"> </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer start -->
+  <footer id="foot" class=" py-5 style= width:100%;">
+    <div class="row">
+      <!-- <div class="col-12 col-md">
+        <small class="d-block mb-3 text-body-secondary">© 2017–2023</small>
+      </div> -->
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary text-decoration-none" href="#">Cool Books</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+          <li><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="float-end"><a id="backto" href="#">&uarr;Back to Top &uarr;</a> </p>
+    <p>© 2023–20XX Company, BookCycle. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </footer>
+  <script>
+    document.getElementById('logOut').style.display = 'none';
+  </script>
+  <!-- <script src="index.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
