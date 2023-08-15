@@ -27,6 +27,6 @@ form.addEventListener('submit', async (e) => {
     } catch (error) {
         alert('something diferent this time');
         // console.error('Error logging in', error);
-        console.error('different message', response.data);
+        console.error('different message', baseURL);
     }
 });

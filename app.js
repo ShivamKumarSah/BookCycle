@@ -121,7 +121,7 @@ app.post(`${baseURL}/login`, async (req, res) => {
     } catch (error) {
         // console.error('Error logging in:', error);
         // res.status(500).json({ error: 'Error logging in' });
-        return res.status(401).json({ 'just for checking': baseURL });
+        return res.status(401).json({ baseURL:'just for checking':  });
     }
 });
 
