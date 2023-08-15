@@ -1,5 +1,6 @@
 const form = document.getElementById('loginForm');
-const baseURL = process.env.BASE_URL || 'http://localhost:8082';
+// const baseURL = process.env.BASE_URL || 'http://localhost:8082';
+const baseURL = 'https://bookcycl.netlify.app';
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
