@@ -25,7 +25,8 @@ form.addEventListener('submit', async (e) => {
         localStorage.setItem('role', response.data.role);
         window.location.href = 'myprofile.html';
     } catch (error) {
-        alert('Invalid email or password:');
-        console.error('Error logging in', error);
+        alert('something diferent this time');
+        // console.error('Error logging in', error);
+        console.error('different message', response.data);
     }
 });
