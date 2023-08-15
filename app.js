@@ -7,7 +7,8 @@ const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const { verifyToken } = require('./middleware');
 
-const baseURL = process.env.BASE_URL || 'http://localhost:8082';
+// const baseURL = process.env.BASE_URL || 'http://localhost:8082';
+const baseURL = 'https://bookcycl.netlify.app';
 // const response = await axios.post(`${baseURL}/login`, loginData);
 
 const app = express();
