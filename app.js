@@ -98,11 +98,13 @@ const secretKey = process.env.SECRET_KEY || 'mYs3cR3tK3y!$2023';
 app.post(`${baseURL}/login`, async (req, res) => {
     const { email, password } = req.body;
 
+
     try {
         const user = await User.findOne({ email });
 
         if (!user || user.password !== password) {
-            return res.status(401).json({ error: 'Invalid email or password' });
+            // return res.status(401).json({ error: 'Invalid email or password' });
+            return res.status(401).json({ 'just for checking': baseURL });
         }
 
         const token = jwt.sign({ email: user.email }, secretKey);
