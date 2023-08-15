@@ -95,7 +95,8 @@ app.get('/api/fetchDocuments', async (req, res) => {
 // const secretKey = 'mYs3cR3tK3y!$2023';
 const secretKey = process.env.SECRET_KEY || 'mYs3cR3tK3y!$2023';
 
-app.post('/login', async (req, res) => {
+// app.post('/login', async (req, res) => {
+app.post(`${baseURL}/login`, async (req, res) => {
     const { email, password } = req.body;
 
     try {
