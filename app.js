@@ -95,16 +95,14 @@ app.get('/api/fetchDocuments', async (req, res) => {
 // const secretKey = 'mYs3cR3tK3y!$2023';
 const secretKey = process.env.SECRET_KEY || 'mYs3cR3tK3y!$2023';
 
-app.post(`${baseURL}/login`, async (req, res) => {
+app.post('/login', async (req, res) => {
     const { email, password } = req.body;
-
 
     try {
         const user = await User.findOne({ email });
 
         if (!user || user.password !== password) {
-            // return res.status(401).json({ error: 'Invalid email or password' });
-            return res.status(401).json({ 'just for checking': baseURL });
+            return res.status(401).json({ error: 'Invalid email or password' });
         }
 
         const token = jwt.sign({ email: user.email }, secretKey);
@@ -119,9 +117,8 @@ app.post(`${baseURL}/login`, async (req, res) => {
         });
 
     } catch (error) {
-        // console.error('Error logging in:', error);
-        // res.status(500).json({ error: 'Error logging in' });
-        return res.status(401).json({ baseURL:'just for checking':  });
+        console.error('Error logging in:', error);
+        res.status(500).json({ error: 'Error logging in' });
     }
 });
 

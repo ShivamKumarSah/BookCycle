@@ -1,5 +1,5 @@
 const form = document.getElementById('loginForm');
-
+const baseURL = process.env.BASE_URL || 'http://localhost:8082';
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -12,7 +12,8 @@ form.addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await axios.post('/login', loginData);
+        const response = await axios.post(`${baseURL}/login`, loginData);
+        // const response = await axios.post('/login', loginData);
         document.cookie = `token=${response.data.token}; Secure; HttpOnly; SameSite=Strict`;
         console.log('Login response:', response.data);
 
@@ -25,8 +26,7 @@ form.addEventListener('submit', async (e) => {
         localStorage.setItem('role', response.data.role);
         window.location.href = 'myprofile.html';
     } catch (error) {
-        alert('something diferent this time');
-        // console.error('Error logging in', error);
-        console.error('different message', baseURL);
+        alert('Invalid email or password:');
+        console.error('Error logging in', error);
     }
 });
